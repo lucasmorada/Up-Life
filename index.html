@@ -14,8 +14,25 @@
     header {
       background-color: #ff7a00;
       color: white;
-      padding: 30px 20px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img.logo {
+      height: 50px;
+    }
+    header h1 {
+      flex: 1;
       text-align: center;
+      font-size: 24px;
+      margin: 0;
+    }
+    .banner img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
     }
     .container {
       padding: 20px;
@@ -54,9 +71,13 @@
 <body>
 
   <header>
+    <img src="logo.png" alt="Logo" class="logo" />
     <h1>Aprenda com os melhores cursos de planejamento!</h1>
-    <p>Trilha completa com suporte e certificado incluso</p>
   </header>
+
+  <div class="banner">
+    <img src="Banners.png" alt="Banner do Curso" />
+  </div>
 
   <div class="container">
 
@@ -85,3 +106,4 @@
 
 </body>
 </html>
+
