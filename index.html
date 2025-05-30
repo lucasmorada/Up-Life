@@ -1,147 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso Completo – Uplife Educacional</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UpLife - Curso Profissional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fff8f0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
       color: #333;
     }
+
     header {
-      background-color: #ff7a00;
+      background-color: #0056D6;
       color: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo-container {
-      background-color: white;
-      padding: 10px;
-      border-radius: 8px;
-    }
-    header img.logo {
-      height: 50px;
-      display: block;
-    }
-    header h1 {
-      flex: 1;
       text-align: center;
-      font-size: 35px;
-      margin: 0;
-      font-weight: 900;
+      padding: 80px 20px 60px;
+      animation: fadeInDown 1s ease;
     }
-    .banner img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      display: block;
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    header p {
+      font-size: 1.2rem;
       margin-bottom: 20px;
     }
-    .card h2 {
-      color: #ff7a00;
-      font-size: 24px; 
+
+    .cta {
+      background-color: white;
+      color: #0056D6;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
     }
-    .card ul li {
-      margin-bottom: 15px;
-      line-height: 1.6;
+
+    .cta:hover {
+      transform: scale(1.05);
+      background-color: #e1e1e1;
     }
-    .no-marker {
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      padding: 30px;
+      animation: fadeInUp 1s ease;
+    }
+
+    section h2 {
+      color: #0056D6;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
       list-style: none;
       padding-left: 0;
     }
-    .btn {
+
+    ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .depoimentos blockquote {
+      font-style: italic;
+      margin: 20px 0;
+      padding-left: 20px;
+      border-left: 4px solid #0056D6;
+    }
+
+    .depoimentos cite {
       display: block;
-      width: 100%;
-      background-color: #ff7a00;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #0056D6;
+    }
+
+    .preco {
+      text-align: center;
+    }
+
+    .preco h3 {
+      font-size: 2rem;
+      color: #0056D6;
+    }
+
+    .faq details {
+      margin-bottom: 10px;
+    }
+
+    .faq summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #0056D6;
+    }
+
+    footer {
+      background-color: #0056D6;
       color: white;
       text-align: center;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      text-decoration: none;
-      margin-top: 20px;
-      cursor: pointer;
+      padding: 20px;
+      font-size: 0.9rem;
     }
-    .btn:hover {
-      background-color: #e96b00;
+
+    /* Botão flutuante do WhatsApp */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo" class="logo" />
-    </div>
-    <h1>Up Life - Sua Nova Jornada Começa Aqui!</h1>
+    <h1>Domine os 3 pilares da Gestão de Projetos</h1>
+    <p>Curso completo com MS Project, Primavera P6 e PCP</p>
+    <a href="#comprar" class="cta">Garanta sua vaga</a>
   </header>
 
-  <div class="banner">
-    <img src="Banners .png" alt="Banner do Curso" />
-  </div>
-
-  <div class="container">
-
-    <div class="card">
-      <h2>Combo Planejamento: Domine as Principais Ferramentas e Estratégias do Setor Industrial</h2>
+  <main class="container">
+    <section class="beneficios">
+      <h2>Por que escolher o UpLife?</h2>
       <ul>
-        <li class="no-marker">
-          Transforme sua carreira com um combo completo e prático que une os pilares essenciais do planejamento industrial. Com foco total na aplicação real das ferramentas mais utilizadas pelo mercado, este combo reúne três trilhas de conhecimento indispensáveis para profissionais da área:
-        </li>
-        <li>📌 <b>Planejamento e Controle da Produção (PCP):</b> Entenda a fundo os processos de produção, aprenda a organizar, programar e controlar operações industriais com eficiência e visão estratégica.</li>
-        <li>📌 <b>MS Project:</b> Domine o software líder em gerenciamento de projetos. Aprenda a estruturar cronogramas, controlar prazos, recursos e acompanhar a execução com precisão.</li>
-        <li>📌 <b>P6:</b> Desenvolva competências em uma das plataformas mais exigidas em grandes projetos industriais. Aprenda a planejar, gerenciar e reportar com robustez e confiabilidade.</li>
-        <li class="no-marker">
-          Ao adquirir o combo, você recebe acesso completo às três trilhas, com conteúdos atualizados, videoaulas didáticas, materiais complementares e suporte especializado. Uma formação prática e direcionada para quem quer se destacar no planejamento de obras, produção e projetos de alta complexidade.<br><br>
-          Este é o caminho ideal para quem busca se tornar um profissional completo e competitivo no mercado industrial.
-        </li>
+        <li>✅ Aulas práticas com ferramentas usadas nas empresas</li>
+        <li>✅ Aumente suas chances no mercado de trabalho</li>
+        <li>✅ Suporte, certificado e bônus exclusivos para alunos</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>✅ O que você vai aprender:</h2>
-      <ul>
-        <li>Estruturação e organização do Planejamento e Controle da Produção (PCP);</li>
-        <li>Criação e acompanhamento de cronogramas no MS Project;</li>
-        <li>Planejamento de grandes obras e projetos no Primavera P6;</li>
-        <li>Alocação de recursos, controle de prazos e custos;</li>
-        <li>Integração entre ferramentas e processos produtivos;</li>
-        <li>Aplicações práticas voltadas ao mercado industrial;</li>
-      </ul>
-    </div>
+    <section class="depoimentos">
+      <h2>O que dizem nossos alunos</h2>
+      <blockquote>
+        “Depois do curso, consegui meu primeiro emprego como planejador de obras. O conteúdo é direto ao ponto!”
+        <cite>– Julia, Aluna Up Life</cite>
+      </blockquote>
+      <blockquote>
+        “Já trabalhava com PCP, mas o curso me ensinou a integrar tudo com o Primavera. Muito prático!”
+        <cite>– Lucas Gabriel, Aluno Up Life</cite>
+      </blockquote>
+    </section>
 
-    <div class="card">
-      <h2>O que está incluso:</h2>
-      <ul>
-        <li>Acesso completo a 3 trilhas de conhecimento: PCP, MS Project e Primavera P6;</li>
-        <li>Certificados reconhecidos de cada curso;</li>
-        <li>Aulas 100% online e gravadas: assista quando e onde quiser;</li>
-        <li>Suporte para dúvidas diretamente com especialistas;</li>
-        <li>Material complementar para download;</li>
-      </ul>
-    </div>
+    <section class="preco" id="comprar">
+      <h2>Invista no seu futuro</h2>
+      <h3>Por apenas R$ 851,00</h3>
+      <p>Acesso vitalício + Certificado + Suporte exclusivo</p>
+      <a href="#" class="cta">Quero me inscrever</a>
+    </section>
 
-    <a class="btn" href="https://wa.me/5541998505518" target="_blank">Saiba Mais</a>
-    <a class="btn" href="https://uplifecursosetreinamentos.com.br/" target="_blank">Uplife - Site</a>
+    <section class="faq">
+      <h2>Perguntas Frequentes</h2>
+      <details>
+        <summary>Preciso de experiência prévia?</summary>
+        <p>Não! O curso vai do básico ao avançado, com explicações passo a passo.</p>
+      </details>
+      <details>
+        <summary>O curso tem certificado?</summary>
+        <p>Sim! Ao final, você recebe um certificado de conclusão reconhecido.</p>
+      </details>
+      <details>
+        <summary>Por quanto tempo terei acesso?</summary>
+        <p>O acesso é vitalício, inclusive às atualizações futuras.</p>
+      </details>
+    </section>
+  </main>
 
-  </div>
+  <a href="https://wa.me/5541998505518" class="whatsapp" target="_blank" title="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+      <path d="M16 0C7.164 0 0 7.164 0 16c0 2.803.729 5.437 2.104 7.789L0 32l8.454-2.075C11.002 31.269 13.461 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.867c-2.377 0-4.719-.637-6.749-1.844l-.486-.289-5.014 1.229 1.065-5.244-.318-.533C3.805 21.029 3.2 18.558 3.2 16c0-7.02 5.708-12.733 12.8-12.733S28.8 8.98 28.8 16c0 7.021-5.708 12.734-12.8 12.734zM22.665 19.2c-.32-.16-1.88-.926-2.173-1.033-.293-.106-.507-.16-.72.16-.214.32-.827 1.033-1.014 1.239-.186.213-.374.24-.694.08-.32-.16-1.353-.498-2.578-1.591-.952-.849-1.595-1.898-1.78-2.217-.186-.32-.02-.494.14-.653.146-.146.32-.374.48-.56.16-.187.213-.32.32-.534.106-.213.053-.4-.027-.56-.08-.16-.72-1.746-.986-2.386-.253-.613-.508-.533-.72-.533l-.613-.013c-.213 0-.56.08-.853.4s-1.12 1.094-1.12 2.666 1.146 3.093 1.307 3.307c.16.213 2.26 3.44 5.48 4.813.767.333 1.364.533 1.828.68.768.24 1.467.213 2.026.133.62-.093 1.88-.773 2.147-1.52.267-.746.267-1.387.186-1.52-.08-.133-.293-.213-.613-.373z"/>
+    </svg>
+  </a>
 
+  <footer>
+    &copy; 2025 UpLife. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
