@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,6 @@
       color: #333;
     }
 
-    /* Novo Header Profissional */
     header {
       background: linear-gradient(90deg, #ff9102, #ffb347);
       color: white;
@@ -85,7 +84,6 @@
         height: 70px;
       }
     }
-    /* Resto do seu CSS permanece igual... */
 
     .banner {
       width: 90%;
@@ -97,10 +95,12 @@
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
+
     section {
       padding: 40px 20px;
       text-align: center;
     }
+
     .content-box {
       background-color: #fff;
       padding: 30px;
@@ -108,33 +108,41 @@
       margin: 30px auto;
       max-width: 800px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
     }
+
     .content-box h2 {
       color: #ff9102;
       margin-bottom: 20px;
+      text-align: center;
     }
+
     .content-box ul {
-      text-align: left;
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
       font-size: 1.1em;
       list-style: none;
       padding-left: 0;
     }
+
     .content-box ul li {
       margin-bottom: 12px;
       padding-left: 25px;
       position: relative;
     }
+
     .content-box ul li::before {
       content: "✔️";
       position: absolute;
       left: 0;
       top: 0;
     }
+
     .cta {
-      margin: 20px 0;
+      margin: 20px 0 0;
+      text-align: center;
     }
+
     .cta button {
       background-color: #ff9102;
       color: white;
@@ -146,20 +154,24 @@
       transition: background-color 0.3s;
       margin: 0 10px;
     }
+
     .cta button:hover {
       background-color: #e07c00;
     }
+
     .btn-site {
       background-color: #333;
       color: #ff9102;
       border: 2px solid #ff9102;
       transition: all 0.3s ease;
     }
+
     .btn-site:hover {
       background-color: #ff9102;
       color: white;
       border-color: #e07c00;
     }
+
     .depoimentos {
       background-color: #fff;
       padding: 30px;
@@ -168,40 +180,54 @@
       max-width: 800px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+
     .depoimentos h2 {
       color: #ff9102;
       margin-bottom: 20px;
     }
+
     .depoimentos p {
       font-style: italic;
       margin-bottom: 12px;
     }
+
     footer {
       background-color: #ff9102;
       color: white;
       text-align: center;
       padding: 15px;
       margin-top: 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
     }
+
+    /* Botão WhatsApp com ícone oficial SVG */
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #25d366;
-      color: white;
-      border: none;
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      font-size: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      z-index: 1000;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
       text-decoration: none;
+      transition: background-color 0.3s ease;
     }
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+    .whatsapp-icon {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+
     /* FAQ Styles */
     .faq-section {
       max-width: 800px;
@@ -251,6 +277,7 @@
     .faq-item.active .faq-answer {
       max-height: 500px; /* bastante espaço para texto */
     }
+
     /* Responsividade */
     @media (max-width: 600px) {
       header {
@@ -293,75 +320,72 @@
 
   <img src="Banners .png" alt="Banner do Curso" class="banner animate__animated animate__fadeIn" />
 
- <section class="content-box animate__animated animate__fadeInUp">
+  <section class="content-box animate__animated animate__fadeInUp">
     <h2>Porque fazer esses cursos?</h2>
     <ul>
-      <li>Profissionais com domínio em PCP, Primavera P6 e MS Project são altamente valorizados no mercado industrial. Esse combo vai preparar você para assumir cargos estratégicos, aumentando suas chances de promoções e salários que podem superar R$ 7.000 mensais. Invista na sua capacitação e destaque-se com as ferramentas mais requisitadas pelas empresas.</li>
+      <li>Profissionais com domínio em PCP, Primavera P6 e MS Project são altamente valorizados no mercado industrial.</li>
+      <li>Esse combo potencializa sua carreira, abrindo portas para cargos estratégicos.</li>
+      <li>Aprenda as melhores práticas para planejar, controlar e executar projetos e produção com eficiência.</li>
+      <li>Capacitação focada em aplicação prática para sua atuação imediata.</li>
     </ul>
-
-  <section class="content-box animate__animated animate__fadeInUp">
-    <h2>O que você vai aprender:</h2>
-    <ul>
-      <li>Planejamento e controle de projetos no MS Project</li>
-      <li>Gerenciamento avançado no Primavera P6</li>
-      <li>Planejamento e controle da produção (PCP)</li>
-      <li>Práticas aplicadas para indústria e construção civil</li>
-      <li>Ferramentas para aumentar sua produtividade e valor no mercado</li>
-    </ul>
-    <div class="cta">
-      <button onclick="window.open('https://uplifecursosetreinamentos.com.br/', '_blank')" class="btn-site">Acesse o site da Up Life</button>
-      <button onclick="window.open('https://wa.me/5541998505518', '_blank')">Fale pelo WhatsApp</button>
-    </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section animate__animated animate__fadeInUp">
+  <section class="content-box animate__animated animate__fadeInUp" style="margin-top: 0;">
+    <h2>O que você vai aprender</h2>
+    <ul>
+      <li>MS Project: criação, gestão e controle de cronogramas de projetos.</li>
+      <li>Primavera P6: planejamento avançado, gerenciamento de recursos e análise de riscos.</li>
+      <li>PCP (Planejamento e Controle da Produção): técnicas para otimizar processos industriais.</li>
+      <li>Integração dos sistemas para maximizar resultados na gestão operacional.</li>
+    </ul>
+  </section>
+
+  <section class="depoimentos animate__animated animate__fadeInUp">
+    <h2>Depoimentos</h2>
+    <p>"Com esse curso, consegui melhorar meu desempenho no trabalho e conquistar uma promoção em apenas 3 meses!" – Lucas Gabriel, Aluno Up Life</p>
+    <p>"O conteúdo é prático, direto ao ponto e muito fácil de entender. Recomendo para quem quer crescer na área industrial." – Virginia</p>
+  </section>
+
+  <section class="faq-section">
     <h2>Perguntas Frequentes</h2>
 
     <div class="faq-item">
-      <div class="faq-question">Qual a duração do curso?</div>
-      <div class="faq-answer">
-        O curso tem duração de 3 meses, com aulas ao vivo e gravadas para você assistir quando quiser.
-      </div>
+      <div class="faq-question">Qual a carga horária do curso?</div>
+      <div class="faq-answer">O curso possui carga horária total de 60 horas, distribuídas em aulas gravadas e exercícios práticos.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">Preciso ter conhecimento prévio em MS Project ou Primavera P6?</div>
-      <div class="faq-answer">
-        Não, o curso é completo e começa do básico ao avançado para você dominar as ferramentas.
-      </div>
+      <div class="faq-question">Preciso ter conhecimento prévio em gestão de projetos?</div>
+      <div class="faq-answer">Não é necessário ter conhecimento prévio, o curso começa do básico até o avançado.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">E se tiver dúvidas ao longo do curso?</div>
-      <div class="faq-answer">
-        Nossa equipe de suporte irá auxiliar você com o que precisar, diretamente pela plataforma através do "Campo de Dúvidas" ou pelo WhatsApp do suporte.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">Existe certificado ao final do curso?</div>
-      <div class="faq-answer">
-        Sim, você receberá um certificado digital reconhecido que pode ser usado para seu currículo.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">Posso parcelar o pagamento?</div>
-      <div class="faq-answer">
-        Sim, você pode efetuar o pagamento à vista com desconto (depósito, TED ou PIX) ou em até 10X no cartão de crédito.
-      </div>
+      <div class="faq-question">O curso oferece certificado?</div>
+      <div class="faq-answer">Sim, ao concluir todas as aulas e atividades você receberá um certificado reconhecido.</div>
     </div>
   </section>
+
+  <div class="cta animate__animated animate__fadeInUp">
+    <button class="btn-site" onclick="window.open('https://uplifecursosetreinamentos.com.br/', '_blank')">Conheça o site</button>
+  </div>
+
+  <a
+    href="https://wa.me/5541998505518"
+    target="_blank"
+    class="whatsapp-button"
+    aria-label="Chat no WhatsApp"
+  >
+    <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M20.52 3.48a11.911 11.911 0 0 0-16.8 16.8l-1.3 4.7 4.84-1.27a11.911 11.911 0 0 0 13.26-20.23zm-8.45 15.12c-2.11 0-3.98-.88-5.35-2.32l-.38-.42-3.17.83.84-3.09-.25-.4a7.9 7.9 0 0 1 1.32-9.68 7.85 7.85 0 0 1 5.65-2.3c4.38 0 7.97 3.58 7.97 8 0 4.42-3.59 8-7.65 8zm4.33-6.15c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.15.23-.6.79-.74.95-.14.15-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.2-1.43-1.34-1.67-.14-.23-.02-.35.1-.47.1-.1.24-.26.37-.39.13-.14.18-.23.27-.39.09-.15.04-.28-.02-.39-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42-.14-.01-.3-.01-.46-.01s-.39.06-.6.28c-.22.23-.85.83-.85 2.02 0 1.18.87 2.32.99 2.48.12.15 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.06 1.43-.58 1.63-1.14.2-.57.2-1.05.14-1.14-.06-.1-.22-.15-.46-.27z"/>
+    </svg>
+  </a>
 
   <footer>
     &copy; 2025 Up Life - Todos os direitos reservados
   </footer>
 
-  <a href="https://wa.me/5541999999999" target="_blank" class="whatsapp-button" aria-label="Fale conosco pelo WhatsApp">📱</a>
-
   <script>
-    // Script para FAQ toggle
+    // FAQ toggle
     document.querySelectorAll('.faq-item').forEach(item => {
       item.querySelector('.faq-question').addEventListener('click', () => {
         item.classList.toggle('active');
@@ -370,5 +394,3 @@
   </script>
 </body>
 </html>
-
-     
