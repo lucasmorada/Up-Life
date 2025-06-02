@@ -167,10 +167,9 @@
     }
 
     .btn-site:hover {
-      background-color: #ff9102;
-      color: white;
-      border-color: #e07c00;
-    }
+  background-color: #1fe1d4;
+}
+
 
     .depoimentos {
       background-color: #fff;
@@ -227,6 +226,24 @@
       height: 32px;
       fill: white;
     }
+
+    .fixed-cta-btn {
+  position: fixed;
+  bottom: 90px; /* acima do botão WhatsApp */
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.fixed-cta-btn:hover {
+  background-color: #0056b3;
+}
 
     /* FAQ Styles */
     .faq-section {
@@ -365,9 +382,14 @@
     </div>
   </section>
 
-  <div class="cta animate__animated animate__fadeInUp">
-    <button class="btn-site" onclick="window.open('https://uplifecursosetreinamentos.com.br/', '_blank')">Conheça o site</button>
-  </div>
+  <section class="cta-section animate__animated animate__fadeInUp" style="padding: 40px 0; text-align: center; background-color: #f0f4f8;">
+  <button class="btn-site" onclick="window.open('https://uplife.com.br', '_blank')" style="padding: 15px 30px; font-size: 1.2rem; border-radius: 8px; cursor: pointer; border: none; background-color: #007bff; color: white; transition: background-color 0.3s;">
+    Quero conhecer o site
+  </button>
+</section>
+
+  <button class="fixed-cta-btn" onclick="window.open('https://uplifecursosetreinamentos.com.br/', '_blank')">Conheça o site</button>
+
 
   <a
     href="https://wa.me/5541998505518"
